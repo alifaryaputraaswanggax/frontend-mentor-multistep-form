@@ -1,0 +1,547 @@
+*, 
+*::before,
+ *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(231, 100%, 99%);
+}
+main{
+    display: flex;
+    background-color: white;
+    padding: 20px;
+    max-width: 990px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px hsla(229, 24%, 87%, 0.5);
+}
+aside{
+    display: flex;
+    flex-direction: column;
+    background-image: url('../images/bg-sidebar-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 275px;
+    height: 570px;
+    border-radius: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 25px;
+}
+
+.steps{
+    list-style: none;
+}
+
+li{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 35px;
+    align-items: center;
+}
+
+.number-circle{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+
+.number-circle:hover{
+    color: hsl(213, 96%, 18%);;
+    background-color: hsl(206, 94%, 87%);
+}
+
+.active .number-circle{
+    color: hsl(213, 96%, 18%);
+    background-color: hsl(206, 94%, 87%);
+}
+
+
+.step{
+    width: 150px;
+}
+
+.step p{
+    color: hsl(231, 11%, 63%);
+    font-size: 13px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.step h3{
+    color: white;
+    font-weight: 700;
+    font-size: 15px
+}
+
+.form-content{
+    padding: 40px 80px;
+    width: 100%;
+}
+
+.step-1 h1, 
+.step-2 h1,
+.step-3 h1,
+.step-4 h1{
+    color: hsl(213, 96%, 18%);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.step-1 p,
+.step-2 p,
+.step-3 p{
+    color: hsl(231, 11%, 63%);
+    margin-bottom: 35px;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label{
+    color: hsl(213, 96%, 18%);
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.form-group input{
+    padding: 8px;
+    border: 1px solid hsl(229, 24%, 87%);
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.buttons-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.step-1 .buttons-container{
+    justify-content: flex-end;
+}
+
+.go-back-btn{
+    color:hsl(231, 11%, 63%);
+    background-color: transparent;
+    border: none;
+    font-weight: 700;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.next-step{
+    color: white;
+    background-color: hsl(213, 96%, 18%);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.next-step:hover{
+    background-color: hsl(243, 100%, 62%);
+}
+
+.confirm-btn{
+    color: white;
+    background-color: hsl(243, 100%, 62%);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.confirm-btn:hover{
+    color: hsl(218, 100%, 97%);
+    background-color: hsl(228, 100%, 84%);
+}
+
+.plans-container{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.plan-card{
+    display: flex;
+    padding: 15px;
+    border: 1px solid hsl(229, 24%, 87%);
+    border-radius: 10px;
+    cursor: pointer;
+    flex: 1;
+    flex-direction: column;
+}
+
+.plan-card:hover{
+    border: 1px solid hsl(213, 96%, 18%);
+    background-color: hsl(217, 100%, 97%);
+}
+
+.plan-card img{
+    padding-bottom: 3rem;
+    width: 45px;
+}
+
+.plan-info h3{
+    color:hsl(213, 96%, 18%);
+    font-weight: 700;
+}
+
+.yearly-promo{
+    color:hsl(213, 96%, 18%);
+    font-size: 0.8rem;
+    display:none;
+}
+
+.toggle-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(217, 100%, 97%);
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.toggle-label{
+    color:hsl(231, 11%, 63%);
+    font-weight: 700;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 0.9rem;
+    margin: 0.8rem;
+}
+
+.toggle-switch{
+    width: 50px;
+    height: 20px;
+    background-color: hsl(213, 96%, 18%);
+    border-radius: 10px;
+    position: relative;
+}
+
+.toggle-slider{
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    background-color: white;
+    border-radius: 50%;
+    left: 3px;
+    top: 3px;
+    transition: 0.4s;
+}
+
+#billing-toggle:checked + .toggle-slider {
+  transform: translateX(26px);
+}
+
+.toggle-label.active {
+  color: hsl(213, 96%, 18%);
+}
+
+/* Visually hide an element, but keep it accessible to screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* tambahan */
+  border: 0;
+}
+
+.addons-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.addon-card{
+    border: 1px solid hsl(229, 24%, 87%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.addon-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top:2rem;
+}
+
+.addon-info h3{
+    color:hsl(213, 96%, 18%);
+    font-size: 1.2rem;
+}
+
+.addon-info p{
+    color: hsl(231, 11%, 63%);
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.addon-price{
+    color:hsl(243, 100%, 62%);
+    margin-left: auto;
+    padding-right: 20px;
+}
+
+.custom-checkbox {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid hsl(229, 24%, 87%); /* Border abu-abu */
+  border-radius: 4px;
+  margin-right: 1.5rem; /* Memberi jarak ke teks di kanannya */
+  position: relative; /* Penting untuk posisi tanda centang nanti */
+}
+
+input:checked + .custom-checkbox {
+  background-color: hsl(243, 100%, 62%); /* Warna ungu */
+  border-color: hsl(243, 100%, 62%);
+}
+
+/* Pertama, siapkan pseudo-element-nya tapi sembunyikan */
+.custom-checkbox::after {
+  content: '';
+  position: absolute;
+  display: none; /* Sembunyikan secara default */
+
+  /* Posisi di tengah kotak */
+  left: 6px;
+  top: 2px;
+  
+  /* Bentuk tanda centang (seperti huruf L yang diputar) */
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* KEDUA, Tampilkan pseudo-element HANYA SAAT input dicentang */
+input:checked + .custom-checkbox::after {
+  display: block;
+}
+/* Style untuk kartu saat di-hover ATAU saat memiliki class .card-checked */
+.addon-card:hover,
+.addon-card.card-checked {
+  border-color: hsl(243, 100%, 62%); /* Border Ungu */
+  background-color: hsl(217, 100%, 97%); /* Background Biru Muda */
+}
+
+.summary-box{
+    background-color: hsl(231, 100%, 99%);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.summary-content,
+.summary-addons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summary-content h3{
+    color:hsl(213, 96%, 18%);
+}
+
+.summary-content a{
+    color: hsl(231, 11%, 63%);
+    text-decoration: underline;
+}
+
+.summary-content a:hover{
+    color: hsl(243, 100%, 62%);
+}
+
+hr{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: none;
+    border-top: 1px solid hsl(229, 24%, 87%);
+}
+
+.summary-price{
+    font-weight: 700;
+    color:hsl(213, 96%, 18%)
+}
+
+.summary-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summary-total p{
+    font-size: 0.8rem;
+    color: hsl(231, 11%, 63%);
+    padding-left: 20px;
+}
+
+.total-price{
+    color:hsl(243, 100%, 62%);
+    font-weight: 700;
+}
+
+.summary-addons span{
+    color:hsl(213, 96%, 18%);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.summary-addons p{
+    color: hsl(231, 11%, 63%);
+    padding-bottom: 10px;
+}
+
+.step-5{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+/* ================================================== */
+/* KODE PENTING UNTUK MENGONTROL TAMPILAN SETIAP STEP */
+/* ================================================== */
+
+/* 1. SECARA DEFAULT, SEMBUNYIKAN SEMUA STEP */
+.form-content > section {
+  display: none; /* Sembunyikan semua section di dalam .form-content */
+  flex-direction: column;
+  flex-grow: 1; 
+}
+
+/* 2. TAMPILKAN HANYA STEP YANG MEMILIKI CLASS "active" */
+.form-content > section.active {
+  display: flex; /* Timpa aturan di atas, dan tampilkan sebagai flex container */
+}
+
+/* ========================================= */
+/* MEDIA QUERY UNTUK MOBILE             */
+/* Style ini hanya akan aktif jika lebar    */
+/* layar 800px atau lebih kecil.            */
+/* ========================================= */
+@media (max-width: 800px) {
+  /* 1. Reset layout utama di body */
+  body {
+    /* Kita tidak lagi menengahkan satu kotak besar, jadi kita ubah perilakunya */
+    display: block;
+    background-color: hsl(217, 100%, 97%); /* Warna background utama mobile */
+  }
+
+  /* 2. Ubah layout main container dari horizontal ke vertikal */
+  main.container {
+    flex-direction: column;
+    /* Hilangkan style 'kartu' karena di mobile tidak ada kotak putih besar */
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    max-width: 100%;
+    border-radius: 0;
+  }
+
+  /* 3. Ubah sidebar menjadi banner horizontal di atas */
+  aside {
+    width: 100%;
+    height: 170px; /* Buat lebih pendek */
+    background-image: url("../images/bg-sidebar-mobile.svg");
+    background-size: cover;
+    border-radius: 0;
+    padding: 2rem 1rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* 4. Buat nomor step berjajar ke samping */
+  .steps {
+    flex-direction: row; /* Ubah dari column (default) menjadi row */
+    justify-content: center;
+  }
+
+  /* 5. Sembunyikan teks di bawah nomor step untuk menghemat ruang */
+  .step {
+    display: none;
+  }
+
+  /* 6. Jadikan .form-content sebagai 'kartu' utama di mobile */
+  .form-content {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem 1.5rem;
+    /* Tarik ke atas agar sedikit menimpa banner sidebar */
+    margin: -4.5rem 1rem 0 1rem;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+    height: auto; /* Biarkan tingginya menyesuaikan konten */
+    position: relative;
+    z-index: 2;
+  }
+
+  /* 7. Pastikan setiap section mengisi ruang yang ada */
+  .form-content > section {
+    height: 100%;
+    display: none; /* Ingat trik kita untuk menyembunyikan step */
+  }
+  .form-content > .active {
+    display: flex; /* Gunakan flex agar tombol bisa didorong ke bawah */
+    flex-direction: column;
+    min-height: 370px;
+  }
+
+  /* 8. Sesuaikan layout kartu plan agar menumpuk vertikal */
+  .plans-container {
+    flex-direction: column;
+  }
+
+  /* 9. Ubah layout di dalam kartu plan menjadi horizontal */
+  .plan-card {
+    flex-direction: row; /* Gambar di kiri, teks di kanan */
+    align-items: center;
+  }
+  .plan-card img {
+    padding-bottom: 0; /* Hapus padding bawah */
+    margin-right: 1rem; /* Beri jarak kanan */
+    width: 40px;
+  }
+
+  /* 10. Jadikan tombol navigasi menempel di bawah layar */
+  .buttons-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 1rem;
+    margin-top: 0; /* Hapus margin-top dari versi desktop */
+    display: flex;
+    justify-content: flex-end;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+  }
+}
