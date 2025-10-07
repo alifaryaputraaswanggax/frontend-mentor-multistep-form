@@ -33,15 +33,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot-desktop.jpg)
-![](./screenshot-mobile.jpg)
-
-*(Note: Replace the filenames above with the actual names of your screenshot files.)*
+<img width="1918" height="999" alt="image" src="https://github.com/user-attachments/assets/7324f328-aed1-4c20-9db4-2a2f7c56e002" />
 
 ### Links
 
-- **Solution URL:** [Add your GitHub repo URL here](https://github.com/your-username/your-repo-name)
-- **Live Site URL:** [Add your live site URL here](https://your-username.github.io/your-repo-name/)
+- **Solution URL:** https://github.com/alifaryaputraaswanggax/frontend-mentor-multistep-form/edit/main/README.md
+- **Live Site URL:** https://multistepsformm.netlify.app/
 
 ## My process
 
@@ -76,3 +73,4 @@ function updateActiveStep(stepIndex) {
   // Then, add the 'active' class only to the current step
   steps[stepIndex].classList.add('active');
 }
+
